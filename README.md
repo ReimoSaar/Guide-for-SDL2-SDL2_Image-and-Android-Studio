@@ -8,3 +8,7 @@
 6) Start Android Studio
 7) Press next after reaching here and download SDK components.
 ![as-initial-download](https://user-images.githubusercontent.com/63605374/140167045-06e68ff3-8d30-428e-96be-2d374a1ec1ce.png)
+8) Click More Actions -> Import Project
+![as-welcome-page](https://user-images.githubusercontent.com/63605374/140644819-55a3dcd9-1d8e-450a-8cbe-c45a37d04c89.png)
+10) Choose android project under /home/user/androidlib/                
+![import-project](https://user-images.githubusercontent.com/63605374/140644823-0342f204-5807-4cda-8871-31d60f7039de.png)
