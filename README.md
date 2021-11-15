@@ -1,5 +1,6 @@
 # Guide-for-SDL2-and-Android-Studio-for-Linux(Ubuntu)
 
+1) Download JDK. Run sudo apt-get install default-jdk
 1) Download Android Studio (at the time, my version was 2020.3.1)
 2) Download SDL2 from https://www.libsdl.org/download-2.0.php
 3) Download SDL2_Image from https://www.libsdl.org/projects/SDL_image/
@@ -20,3 +21,4 @@
 14) Sync project with gradle files. To do that, either press Try Again button or press ctrl+shift+a and write Sync project with gradle files
 ![try_again_button](https://user-images.githubusercontent.com/63605374/141829161-7c569803-9192-4c70-a934-83cde4614fa2.png)
 ![sync-project-with-gradle-files](https://user-images.githubusercontent.com/63605374/141829178-e3de73c4-f1cf-49a6-b313-d70c8f96f59c.png)
+15) You should get two warnings and one error. Both warnings say the following: "license for package android sdk platform <version> not accepted". To fix it, go to /home/user/Android/sdk/tools/bin/ and run ./sdkmanager --licenses
