@@ -19,6 +19,8 @@
 13) Click SDK Tools tab and check Show Package Details, pick SDK version (I picked SDK 31.0.0).
 ![specify-sdk-version](https://user-images.githubusercontent.com/63605374/141822037-ffd152d9-af78-4e42-a22b-3fc0369221c1.png)
 14) Also check Android SDK Command-line Tools (Latest)
+15) And finally, check Android NDK
+16) ![install-NDK](https://user-images.githubusercontent.com/63605374/143080973-1a5e69a8-56e0-4e73-9dac-13b763d896c2.png)
 ![install-SDK-cmd-line-tools](https://user-images.githubusercontent.com/63605374/143074468-181337a3-ace4-405b-a094-fa01bc1db5de.png)
 15) Sync project with gradle files. To do that, either press Try Again button or press ctrl+shift+a and write Sync project with gradle files
 ![try_again_button](https://user-images.githubusercontent.com/63605374/141829161-7c569803-9192-4c70-a934-83cde4614fa2.png)
