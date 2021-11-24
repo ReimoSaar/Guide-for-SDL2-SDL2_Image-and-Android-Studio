@@ -26,6 +26,8 @@
 ![try_again_button](https://user-images.githubusercontent.com/63605374/141829161-7c569803-9192-4c70-a934-83cde4614fa2.png)
 ![sync-project-with-gradle-files](https://user-images.githubusercontent.com/63605374/141829178-e3de73c4-f1cf-49a6-b313-d70c8f96f59c.png)
 17) You should get two warnings and one error. Both warnings say the following: "license for package android sdk platform <version> not accepted". To fix it, go to /home/user/Android/sdk/tools/bin/ and run ./sdkmanager --licenses
-
+18) If you sync project with gradle files again you shuld get the following error: NDK not configured. To fix it, add the following line to application.properties below sdk.dir: ndk.dir=/home/user/Android/Sdk/ndk/21.1.6352462
+![add-NDK](https://user-images.githubusercontent.com/63605374/143287962-a44516d2-51de-45f6-8dc4-a502c97f369e.png)
+19) Sync project with gradle again and you should get BUILD SUCCESSFUL.
   
-  For more help, also check out https://wiki.libsdl.org/Android
+For more help, also check out https://wiki.libsdl.org/Android
