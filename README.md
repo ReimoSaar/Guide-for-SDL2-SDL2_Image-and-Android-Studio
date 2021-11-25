@@ -29,9 +29,14 @@
 18) If you sync project with gradle files again you shuld get the following error: NDK not configured. To fix it, add the following line to application.properties below sdk.dir: ndk.dir=/home/user/Android/Sdk/ndk/21.1.6352462
 ![add-NDK](https://user-images.githubusercontent.com/63605374/143287962-a44516d2-51de-45f6-8dc4-a502c97f369e.png)
 19) Sync project with gradle again and you should get BUILD SUCCESSFUL.
-20) Create a file under jni/src called main.cpp
+20) Click No Devices -> AVD Manager
+![choose-AVD-manager](https://user-images.githubusercontent.com/63605374/143486632-15136d22-c296-4f8b-a096-53b71d330a31.png)
+21) Then Press Create Virtual Device
+22) Select Hardware (I chose Pixel 4XL) and press Next
+23) Select system image (I chose Oreo Android 8.1)
+21) Create a file under jni/src called main.cpp
 ![add-main](https://user-images.githubusercontent.com/63605374/143470114-4cda1784-f5b9-47f4-b314-6c6145d826f6.png)
-21) Write the following inside main.cpp:
+22) Write the following inside main.cpp:
 ``
 
 For more help, also check out https://wiki.libsdl.org/Android
