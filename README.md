@@ -2,7 +2,7 @@
 
 1) Download JDK. sudo apt install openjdk-8-jdk
 2) Download Android Studio (at the time, my version was 2020.3.1)
-3) Download SDL2 from https://www.libsdl.org/download-2.0.php
+3) Download SDL2 source code from https://www.libsdl.org/download-2.0.php
 4) Download SDL2_Image from https://www.libsdl.org/projects/SDL_image/
 5) Create a folder called androidlib under /home/user and
 6) Extract SDL2 and SDL2_image into androidlib folder
