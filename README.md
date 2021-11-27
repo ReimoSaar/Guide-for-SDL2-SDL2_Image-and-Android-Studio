@@ -4,7 +4,7 @@
 2) Download Android Studio (at the time, my version was 2020.3.1)
 3) Download SDL2 source code from https://www.libsdl.org/download-2.0.php
 4) Download SDL2_Image from https://www.libsdl.org/projects/SDL_image/
-5) Create a folder called androidlib under /home/user and
+5) Create a folder called androidlib under /home/user
 6) Extract SDL2 and SDL2_image into androidlib folder
 7) Start Android Studio
 8) Press next after reaching here and download SDK components.
