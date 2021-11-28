@@ -33,7 +33,7 @@
 ![choose-AVD-manager](https://user-images.githubusercontent.com/63605374/143486632-15136d22-c296-4f8b-a096-53b71d330a31.png)
 21) Then Press Create Virtual Device
 22) Select Hardware (I chose Pixel 4XL) and press Next
-23) Verify confiuration and click Finish
+23) Verify configuration and click Finish
 23) Select system image (I chose Oreo Android 8.1)
 24) Create a file under jni/src called main.cpp
 ![add-main](https://user-images.githubusercontent.com/63605374/143470114-4cda1784-f5b9-47f4-b314-6c6145d826f6.png)
@@ -110,6 +110,7 @@ int main(int argc, char *argv[])
   SDL_Quit();
   return(0);
 }```
+
 26) Modify jni/src/Android.mk. Replace LOCAL_SRC_FILES := YourSourceHere.c with LOCAL_SRC_FILES := main.cpp
 27) Press run
 ![press-run](https://user-images.githubusercontent.com/63605374/143764155-7ce85861-9843-4f7d-a8e0-6dc75b4e9f54.png)
