@@ -109,11 +109,14 @@ int main(int argc, char *argv[])
 
   SDL_Quit();
   return(0);
-}```
+}
+```
 
 26) Modify jni/src/Android.mk. Replace LOCAL_SRC_FILES := YourSourceHere.c with LOCAL_SRC_FILES := main.cpp
 27) Press run
-![press-run](https://user-images.githubusercontent.com/63605374/143764155-7ce85861-9843-4f7d-a8e0-6dc75b4e9f54.png)
-28) You got and error that says: Module main depends on undefined modules: SDL2. That's because our program cant access SDL2 files. To fix it, symlynk SDL2 to your project.
+![press-run](https://user-images.githubusercontent.com/63605374/143783195-a2851ecb-ea01-467d-bb20-ce4756336c39.png)
+28) You got and error that says: Module main depends on undefined modules: SDL2. That`s because our program cant access SDL2 files. To fix it, add SDL2 to src/jni with symbolic link. command: ln -s /home/user/androidlib/SDL2-2.0.16/ SDL2
+![symlinked SDL2](https://user-images.githubusercontent.com/63605374/143783722-7097df58-1476-4f18-8dc1-d6394adebcc3.png)
+
 
 For more help, also check out https://wiki.libsdl.org/Android
