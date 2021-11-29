@@ -38,7 +38,9 @@
 24) Create a file under jni/src called main.cpp
 ![add-main](https://user-images.githubusercontent.com/63605374/143470114-4cda1784-f5b9-47f4-b314-6c6145d826f6.png)
 25) Write the following inside main.cpp:
-```#include "SDL.h"
+
+```
+#include "SDL.h"
 #include "SDL_image.h"
 
 /* XPM */
