@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
 28) You got and error that says: Module main depends on undefined modules: SDL2. That`s because our program cant access SDL2 files. To fix it, add SDL2 to src/jni with symbolic link. command: ln -s /home/user/androidlib/SDL2-2.0.16/ SDL2
 ![symlinked SDL2](https://user-images.githubusercontent.com/63605374/143783722-7097df58-1476-4f18-8dc1-d6394adebcc3.png)
 29) Also, symlink SDL_image to the same location: ln -s /home/reimo/androidlib/SDL2_image-2.0.5/ SDL_image
-30) next you have to run the following command: ~/Android/Sdk/ndk/21.1.6352462/ndk-build -C ~/Projects/Trench-android-2/app/jni/
+30) next you have to run the following command: ~/Android/Sdk/ndk/21.1.6352462/ndk-build -C ~/Projects/android-project/app/jni/
 
 
 For more help, also check out https://wiki.libsdl.org/Android
