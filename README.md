@@ -120,11 +120,11 @@ int main(int argc, char *argv[])
 29) You got and error that says: Module main depends on undefined modules: SDL2. That`s because our program cant access SDL2 files. To fix it, add SDL2 to app/jni with symbolic link. command: ln -s /home/user/androidlib/SDL2-2.0.16/ SDL2
 30) Also, symlink SDL_image to the same location: ln -s /home/reimo/androidlib/SDL2_image-2.0.5/ SDL2_image
 31) next you have to run the following command: ~/Android/Sdk/ndk/21.1.6352462/ndk-build -C ~/Projects/android-project/app/jni/
-32) Run build.
+32) Run build
 33) You should get an error saying Android resource linking failed. To fix it, app/src/main/build.gradle and set compileSdkVersion and targetSdkVersion to 31
 ![cmosdk-and-tgtsdkv](https://user-images.githubusercontent.com/63605374/144887310-71068152-9571-477e-8f85-f8b16a4d9bba.png)
 34) Run build again and you should get the following error: More than one file was found with OS independent path 'lib/arm64-v8a/libhidapi.so'
-35) To fix it, and some other similar errors, add the following to app/src/build.gradle inside android closure.
+35) To fix it, and some other similar errors, add the following to app/src/build.gradle inside android closure
 ```
 packagingOptions {
     pickFirst 'lib/arm64-v8a/libhidapi.so'
@@ -147,8 +147,9 @@ packagingOptions {
 ```
 ![packaging-options](https://user-images.githubusercontent.com/63605374/144894999-e7424510-06a5-4f62-a76b-f903b53e13bf.png)
 
-36) Build again and you should get no errors.
+36) Build again and you should get no errors
 37) If you run your program, the following image should appear
+
 ![emulator](https://user-images.githubusercontent.com/63605374/144897427-962ac359-d3b6-42ad-8797-5bf9cf8378b8.png)
 
 
