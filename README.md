@@ -19,7 +19,7 @@
 13) Click SDK Tools tab and check Show Package Details, pick SDK version (I picked SDK 31.0.0).
 ![specify-sdk-version](https://user-images.githubusercontent.com/63605374/141822037-ffd152d9-af78-4e42-a22b-3fc0369221c1.png)
 14) Also check Android SDK Command-line Tools!
-[install-SDK-cmd-line-tools](https://user-images.githubusercontent.com/63605374/143089491-dfe8200b-69ed-4853-917c-88e316905eec.png)
+![install-SDK-cmd-line-tools](https://user-images.githubusercontent.com/63605374/143089491-dfe8200b-69ed-4853-917c-88e316905eec.png)
 15) And finally, check Android NDK and click Apply. I installed version 21.1.6352462 because newer version seem to be missing a "platforms" directory
 ![install-NDK](https://user-images.githubusercontent.com/63605374/143092077-bf916904-0064-499c-86df-0f5439584113.png)
 16) Sync project with gradle files. To do that, either press Try Again button or press ctrl+shift+a and write Sync project with gradle files
@@ -34,10 +34,10 @@
 21) Then Press Create Virtual Device
 22) Select Hardware (I chose Pixel 4XL) and press Next
 23) Verify configuration and click Finish
-23) Select system image (I chose Oreo Android 8.1)
-24) Create a file under jni/src called main.cpp
+24) Select system image (I chose Oreo Android 8.1)
+25) Create a file under jni/src called main.cpp
 ![add-main](https://user-images.githubusercontent.com/63605374/143470114-4cda1784-f5b9-47f4-b314-6c6145d826f6.png)
-25) Write the following inside main.cpp:
+26) Write the following inside main.cpp:
 
 ```
 #include "SDL.h"
@@ -114,17 +114,17 @@ int main(int argc, char *argv[])
 }
 ```
 
-26) Modify jni/src/Android.mk. Replace LOCAL_SRC_FILES := YourSourceHere.c with LOCAL_SRC_FILES := main.cpp
-27) Press run
+27) Modify jni/src/Android.mk. Replace LOCAL_SRC_FILES := YourSourceHere.c with LOCAL_SRC_FILES := main.cpp
+28) Press run
 ![press-run](https://user-images.githubusercontent.com/63605374/143783195-a2851ecb-ea01-467d-bb20-ce4756336c39.png)
-28) You got and error that says: Module main depends on undefined modules: SDL2. That`s because our program cant access SDL2 files. To fix it, add SDL2 to app/jni with symbolic link. command: ln -s /home/user/androidlib/SDL2-2.0.16/ SDL2
-29) Also, symlink SDL_image to the same location: ln -s /home/reimo/androidlib/SDL2_image-2.0.5/ SDL2_image
-30) next you have to run the following command: ~/Android/Sdk/ndk/21.1.6352462/ndk-build -C ~/Projects/android-project/app/jni/
-31) Run build.
-32) You should get an error saying Android resource linking failed. To fix it, app/src/main/build.gradle and set compileSdkVersion and targetSdkVersion to 31
+29) You got and error that says: Module main depends on undefined modules: SDL2. That`s because our program cant access SDL2 files. To fix it, add SDL2 to app/jni with symbolic link. command: ln -s /home/user/androidlib/SDL2-2.0.16/ SDL2
+30) Also, symlink SDL_image to the same location: ln -s /home/reimo/androidlib/SDL2_image-2.0.5/ SDL2_image
+31) next you have to run the following command: ~/Android/Sdk/ndk/21.1.6352462/ndk-build -C ~/Projects/android-project/app/jni/
+32) Run build.
+33) You should get an error saying Android resource linking failed. To fix it, app/src/main/build.gradle and set compileSdkVersion and targetSdkVersion to 31
 ![cmosdk-and-tgtsdkv](https://user-images.githubusercontent.com/63605374/144887310-71068152-9571-477e-8f85-f8b16a4d9bba.png)
-33) Run build again and you should get the following error: More than one file was found with OS independent path 'lib/arm64-v8a/libhidapi.so'
-34) To fix it, and some other similar errors, add the following to app/src/build.gradle inside android closure.
+34) Run build again and you should get the following error: More than one file was found with OS independent path 'lib/arm64-v8a/libhidapi.so'
+35) To fix it, and some other similar errors, add the following to app/src/build.gradle inside android closure.
 ```
 packagingOptions {
     pickFirst 'lib/arm64-v8a/libhidapi.so'
@@ -146,7 +146,10 @@ packagingOptions {
 }
 ```
 ![packaging-options](https://user-images.githubusercontent.com/63605374/144894999-e7424510-06a5-4f62-a76b-f903b53e13bf.png)
-35) Build again and you should get no errors.
+
+36) Build again and you should get no errors.
+37) If you run your program, the following image should appear
+![emulator](https://user-images.githubusercontent.com/63605374/144897427-962ac359-d3b6-42ad-8797-5bf9cf8378b8.png)
 
 
 For more help, also check out https://wiki.libsdl.org/Android
