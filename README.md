@@ -1,4 +1,4 @@
-# Guide-for-SDL2-and-Android-Studio-for-Linux(Ubuntu)
+# Guide-for-SDL2-SDL2_image-and-Android-Studio-for-Linux(Ubuntu) 2022
 
 1) Download JDK. sudo apt install openjdk-8-jdk
 2) Download Android Studio (at the time, my version was 2020.3.1)
