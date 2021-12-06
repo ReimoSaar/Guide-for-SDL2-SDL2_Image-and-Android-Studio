@@ -120,6 +120,9 @@ int main(int argc, char *argv[])
 28) You got and error that says: Module main depends on undefined modules: SDL2. That`s because our program cant access SDL2 files. To fix it, add SDL2 to app/jni with symbolic link. command: ln -s /home/user/androidlib/SDL2-2.0.16/ SDL2
 29) Also, symlink SDL_image to the same location: ln -s /home/reimo/androidlib/SDL2_image-2.0.5/ SDL2_image
 30) next you have to run the following command: ~/Android/Sdk/ndk/21.1.6352462/ndk-build -C ~/Projects/android-project/app/jni/
+31) Run build.
+32) You should get an error saying Android resource linking failed. To fix it, app/src/main/build.gradle and set compileSdkVersion and targetSdkVersion to 31
+![cmosdk-and-tgtsdkv](https://user-images.githubusercontent.com/63605374/144887310-71068152-9571-477e-8f85-f8b16a4d9bba.png)
 
 
 For more help, also check out https://wiki.libsdl.org/Android
