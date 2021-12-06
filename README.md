@@ -123,6 +123,30 @@ int main(int argc, char *argv[])
 31) Run build.
 32) You should get an error saying Android resource linking failed. To fix it, app/src/main/build.gradle and set compileSdkVersion and targetSdkVersion to 31
 ![cmosdk-and-tgtsdkv](https://user-images.githubusercontent.com/63605374/144887310-71068152-9571-477e-8f85-f8b16a4d9bba.png)
+33) Run build again and you should get the following error: More than one file was found with OS independent path 'lib/arm64-v8a/libhidapi.so'
+34) To fix it, and some other similar errors, add the following to app/src/build.gradle inside android closure.
+```
+packagingOptions {
+    pickFirst 'lib/arm64-v8a/libhidapi.so'
+    pickFirst 'lib/x86_64/libSDL2_image.so'
+    pickFirst 'lib/armeabi-v7a/libSDL2_image.so'
+    pickFirst 'lib/armeabi-v7a/libSDL2.so'
+    pickFirst 'lib/x86/libSDL2_image.so'
+    pickFirst 'lib/armeabi-v7a/libhidapi.so'
+    pickFirst 'lib/x86/libhidapi.so'
+    pickFirst 'lib/x86_64/libhidapi.so'
+    pickFirst 'lib/x86_64/libmain.so'
+    pickFirst 'lib/arm64-v8a/libmain.so'
+    pickFirst 'lib/x86/libSDL2.so'
+    pickFirst 'lib/armeabi-v7a/libmain.so'
+    pickFirst 'lib/arm64-v8a/libSDL2.so'
+    pickFirst 'lib/x86_64/libSDL2.so'
+    pickFirst 'lib/x86/libmain.so'
+    pickFirst 'lib/arm64-v8a/libSDL2_image.so'
+}
+```
+![packaging-options](https://user-images.githubusercontent.com/63605374/144894999-e7424510-06a5-4f62-a76b-f903b53e13bf.png)
+35) Build again and you should get no errors.
 
 
 For more help, also check out https://wiki.libsdl.org/Android
